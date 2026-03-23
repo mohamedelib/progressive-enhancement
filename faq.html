@@ -1,24 +1,70 @@
 <!doctype html>
 <html lang="nl">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width">
-		<title>Veelgestelde vragen / Progressive Enhancement / FDND</title>
-		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-		<link href="assets/styles.css" rel="stylesheet">
-		<style>
-			/* Schrijf hier gewoon je CSS voor dit component */
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Veelgestelde vragen / Progressive Enhancement / FDND</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="assets/styles.css" rel="stylesheet" />
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        padding: 2rem;
+        max-width: 700px;
+        margin: 0 auto;
+      }
 
-			/* Hint: Dit component kun je volledig met HTML en CSS bouwen */
+      details {
+        margin-bottom: 1rem;
+        background: #a855f7;
+        border-radius: 0.5rem;
+      }
 
-			/* Hint: Denk aan de states van het component; deze kan open en dicht zijn */
-		</style>
-	</head>
-	<body>
-		<h1>Veelgestelde vragen</h1>
+      details:nth-of-type(even) {
+        background: #2dd4a8;
+      }
 
+      summary {
+        padding: 0.5rem 1rem;
+        font-weight: 700;
+        cursor: pointer;
+      }
 
-		<!-- Content (waar nog wat HTML omheen moet 😄):
+      details > p {
+        padding: 0 1rem 1rem;
+        line-height: 1.6;
+      }
+
+      /* @SUPPORTS */
+      @supports (interpolate-size: allow-keywords) {
+        :root {
+          interpolate-size: allow-keywords;
+        }
+
+        details::details-content {
+          overflow: hidden;
+          height: 0;
+          opacity: 0;
+          transition:
+            height 0.3s ease,
+            opacity 0.3s ease,
+            content-visibility 0.3s ease allow-discrete;
+        }
+
+        details[open]::details-content {
+          height: auto;
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Veelgestelde vragen</h1>
+
+    <!-- Content (waar nog wat HTML omheen moet 😄):
 		Wat is frontend development?
 		Een frontend developer ontwerpt en bouwt websites in HTML, CSS en JavaScript. Deze frontend talen leer je bij ons, je hebt dus geen voorkennis nodig.
 
@@ -30,13 +76,29 @@
 		Na afronding van deze tweejarige hbo-opleiding, krijg je een wettelijk erkend hbo-diploma met de graad Associate degree. Met dit Ad-diploma kun je direct aan de slag in het werkveld of doorstromen naar de bacheloropleiding Communication and Multimedia Design (CMD).
 		-->
 
+    <!-- Hint: Dit stukje HTML geeft het misschien al weg :) -->
+    <details>
+      <summary>Cool</summary>
+      Wat is frontend development? Een frontend developer ontwerpt en bouwt
+      websites in HTML, CSS en JavaScript. Deze frontend talen leer je bij ons,
+      je hebt dus geen voorkennis nodig.
+    </details>
 
-		<!-- Hint: Dit stukje HTML geeft het misschien al weg :) -->
-		<details open>
-			<summary>Demo video</summary>
-			<video src="assets/faq.mp4" width="765" height="769" controls muted autoplay loop>
-				<a href="assets/faq.mp4">assets/faq.mp4</a>
-			</video>
-		</details>
-	</body>
+    <details>
+      <summary>Hoi</summary>
+      Wat is een Associate Degree? Een Associate degree-opleiding is een
+      tweejarige hbo-opleiding op niveau 5. Een Ad slaat een brug tussen het
+      mbo-4 (niveau 4) en een hbo-bachelor (niveau 6). Met een Associate degree
+      kies je voor een praktijkgerichte hbo-opleiding; je wordt opgeleid voor
+      een beroep dat aansluit bij de praktijk. In dit geval word je opgeleid tot
+      ‘frontend designer/developer' of kortweg ‘frontender’. Frontenders
+      ontwerpen en maken interactieve, toegankelijke toepassingen voor het web.
+      Frontenders werken binnen het gebied van software development,
+      interactieontwerp en digitaal visueel ontwerp. Na afronding van deze
+      tweejarige hbo-opleiding, krijg je een wettelijk erkend hbo-diploma met de
+      graad Associate degree. Met dit Ad-diploma kun je direct aan de slag in
+      het werkveld of doorstromen naar de bacheloropleiding Communication and
+      Multimedia Design (CMD). -->
+    </details>
+  </body>
 </html>
