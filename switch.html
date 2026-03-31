@@ -38,6 +38,10 @@
         background-color: white;
         border-radius: 50%;
         transition: left 0.3s;
+
+        @supports (color: light-dark(blue, pink)) {
+          color: light-dark(blue, pink);
+        }
       }
 
       input[type="checkbox"]:checked {
