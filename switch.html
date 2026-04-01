@@ -43,9 +43,9 @@
         border-radius: 50%;
         transition: left 0.3s;
 
-        @supports (color: light-dark(blue, pink)) {
-          color: light-dark(blue, pink);
-        }
+        /* @supports (color: light-dark(blue, pink)) { */
+        color: light-dark(blue, pink);
+        /* } */
       }
 
       input[type="checkbox"]:checked {
@@ -62,8 +62,13 @@
     </style>
   </head>
   <body>
-    <h1>Switch control</h1>
-    <input type="checkbox" />
+    <form>
+      <h1>Switch control</h1>
+      <label>
+        checkbox
+        <input type="checkbox" />
+      </label>
+    </form>
     <!-- Hint: Safari heeft hiervoor iets bedacht, maar is dat al een standaard?
 		     Wat gebeurt er in browsers die dat nog niet ondersteunen? -->
 
