@@ -10,9 +10,50 @@
     />
     <link href="assets/styles.css" rel="stylesheet" />
     <style>
-      .hamburger {
+      .hamburger,
+      nav button {
         background: none;
         border: none;
+        cursor: pointer;
+      }
+      nav button {
+        padding: 10px;
+        font-size: 35px;
+        color: white;
+        padding: 10px;
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        &:hover {
+          background-color: brown;
+        }
+      }
+      nav[popover] {
+        inset: 0 auto 0 0;
+        margin: 0;
+        height: 100%;
+        width: 30vw;
+        border: none;
+        background-color: orangered;
+        color: white;
+        margin-bottom: 30px;
+        padding: 0 0 0 2vw;
+        position: relative;
+        padding-top: 70px;
+      }
+
+      nav[popover] a {
+        display: block;
+        font-size: 20px;
+        color: inherit;
+        text-decoration: none;
+        margin-bottom: 30px;
+        cursor: pointer;
+        padding: 20px;
+
+        &:hover {
+          background-color: brown;
+        }
       }
     </style>
     <script type="module">
