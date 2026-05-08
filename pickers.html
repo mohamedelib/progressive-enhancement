@@ -31,3 +31,57 @@
 			</video>
 		</details>
 	</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Favorieten picker / Progressive Enhancement / FDND</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="assets/styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <h1>Favorieten picker</h1>
+
+    <section>
+      <form>
+        <input type="text" name="docent" list="docenten" placeholder="Naam" />
+        <datalist id="docenten">
+          <option value="Charley Muhren"></option>
+          <option value="Cyd Stumpel"></option>
+          <option value="Dion Pieters"></option>
+          <option value="Dorien Drees"></option>
+          <option value="Joost Faber"></option>
+          <option value="Justus Sturkenboom"></option>
+          <option value="Koop Reynders"></option>
+          <option value="Krijn Hoetmer"></option>
+          <option value="Sanne 't Hooft"></option>
+          <option value="Suus ten Voorde"></option>
+        </datalist>
+
+        <input type="color" name="kleur" list="fdnd-kleuren" />
+        <datalist id="fdnd-kleuren">
+          <option value="#A675F5"></option>
+          <option value="#050542"></option>
+          <option value="#66E5BF"></option>
+          <option value="#FFFC86"></option>
+        </datalist>
+      </form>
+    </section>
+
+    <details>
+      <summary>Demo video</summary>
+      <video
+        src="assets/pickers.mp4"
+        width="749"
+        height="417"
+        controls
+        muted
+        autoplay
+        loop
+      >
+        <a href="assets/pickers.mp4">assets/pickers.mp4</a>
+      </video>
+    </details>
