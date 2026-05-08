@@ -127,3 +127,13 @@
         <a href="assets/pickers.mp4">assets/pickers.mp4</a>
       </video>
     </details>
+
+    <script>
+      const section = document.querySelector("section");
+      const kleur = document.querySelector('[name="kleur"]');
+      kleur.addEventListener("input", () => {
+        section.style.backgroundColor = kleur.value;
+      });
+    </script>
+  </body>
+</html>
