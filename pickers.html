@@ -40,6 +40,49 @@
       rel="stylesheet"
     />
     <link href="assets/styles.css" rel="stylesheet" />
+    <style>
+      h1 {
+        color: white;
+      }
+      body {
+        font-family: sans-serif;
+        background-image: url(assets/backie.avif);
+        background-size: cover;
+      }
+
+      section {
+        padding: 4rem;
+        background-color: #fffc86;
+        transition: background-color 0.3s;
+        display: grid;
+        place-items: center;
+        min-height: 50vh;
+        border-radius: 50%;
+        outline: 5px dashed white;
+      }
+
+      form {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      input[type="text"] {
+        field-sizing: content;
+        min-width: 5ch;
+        font-size: 1.5rem;
+        font-weight: bold;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 0.5rem;
+      }
+
+      /* pijltje weg halen met position absolute aangezien display: none niet werkt */
+      input[type="text"]::-webkit-calendar-picker-indicator {
+        position: absolute;
+        right: -100px;
+      }
+    </style>
   </head>
 
   <body>
